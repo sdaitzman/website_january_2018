@@ -1,0 +1,82 @@
+html, body { min-height: 100% }
+
+::selection {
+  color: white;
+  background: #F74E45;
+}
+
+html {
+  border-left: 5vw solid #F74E45;
+  font: "Roboto" 20px;
+  text-align: justify;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-container {
+  margin: 0 2vw;
+}
+
+.page-title {
+  font: 100px "halyard-text";
+  font-weight: 700;
+  line-height: 1;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-list li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.nav-list li a {
+  font: 40px "roboto";
+  color: black;
+}
+
+.nav-list li a:hover {
+  color: #42C0FF;
+  text-decoration: none;
+}
+
+.about-me {
+  font: 30px "roboto";
+  padding-right: 20px;
+  text-align: justify;
+}
+
+a:hover {
+  color: #42C0FF;
+}
+
+a:active {
+  color: #B0E5FF !important;
+}
+
+@media (max-width: 720px) {
+  body {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .page-title {
+    font-size: 72px;
+  }
+  html {
+    border-left: none;
+    border-top: 100px solid #F74E45;
+  }
+  .about-me {
+    font-size: 22px;
+    text-align: left;
+  }
+}
