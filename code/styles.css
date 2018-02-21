@@ -36,26 +36,6 @@ body {
   line-height: 1;
 }
 
-.nav-list {
-  margin: 25px 0 65px;
-  list-style: none;
-  padding: 0;
-}
-
-.nav-list li {
-  display: inline;
-  margin-right: 10px;
-}
-
-.nav-list li a {
-  font: 40px "Roboto";
-  color: black;
-}
-
-.nav-list li a:hover {
-  color: #42C0FF;
-}
-
 .me-photo {
   max-width: 200px;
   max-height: 200px;
