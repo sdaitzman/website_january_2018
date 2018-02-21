@@ -1,5 +1,3 @@
 $(function () {
-  $('.about-popover').popover({
-    trigger: 'focus'
-  })
+  // swal('hi')
 })
