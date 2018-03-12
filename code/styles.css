@@ -22,7 +22,7 @@ body {
 }
 
 .body-container {
-  margin: 0 2vw 0 8vw;
+margin: 3vw;
 }
 
 .page-header {
@@ -34,11 +34,12 @@ body {
   font-weight: 300;
   margin: 0;
   line-height: 1;
+  align-self: center;
 }
 
 .me-photo {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 150px;
+  max-height: 150px;
   border-radius: 100px;
   margin-right: 25px;
 }
@@ -49,24 +50,39 @@ body {
   text-align: justify;
 }
 
-a:hover {
-  color: #42C0FF;
+a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid black;
 }
 
-a:active {
-  color: #B0E5FF !important;
+a:hover, a:focus {
+  color: #F74E45;
+  border-bottom-color: #F74E45;
 }
+
+/* a:active {
+  border-bottom: none;
+  color: white;
+  background-color: #F74E45;
+} */
 
 @media (max-width: 720px) {
   body {
-    align-items: flex-start;
-    justify-content: flex-start;
+    border: none;
+    border-left: 4vw solid #F74E45;
+  }
+  .me-photo {
+    max-width: 85px;
+    max-height: 85px;
+    margin-right: 5px;
   }
   .page-title {
-    font-size: 72px;
+    font-size: 45px;
   }
   .body-container {
     margin: 2vh 1vw;
+    padding: 10px;
   }
   .nav-list {
     margin: 5px 0 25px;
@@ -75,7 +91,7 @@ a:active {
     border-bottom: 1px solid black;
   }
   .about-me {
-    font-size: 16px;
-    text-align: justify;
+    font-size: 18px;
+    padding: 0;
   }
 }
