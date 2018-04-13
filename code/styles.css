@@ -1,3 +1,8 @@
+@keyframes fadeIn {
+  from { opacity: 0;transform: translateY(-20px) }
+  to { opacity: 1;transform: translateY(0) }
+}
+
 html, body { min-height: 100% }
 
 ::selection {
@@ -6,14 +11,15 @@ html, body { min-height: 100% }
 }
 
 html {
-  font: "Roboto" 20px;
+  animation: fadeIn 0.4s ease-out;
+  font-family: "IBM Plex Sans";
   font-weight: 300;
   text-align: justify;
 }
 
 body {
   box-sizing: border-box;
-  border: 2vw solid #F74E45;
+  border-left: 7vw solid #F74E45;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -30,7 +36,8 @@ margin: 3vw;
 }
 
 .page-title {
-  font: 100px "Roboto";
+  font: 100px "IBM Plex Sans";
+  text-align: left;
   font-weight: 300;
   margin: 0;
   line-height: 1;
@@ -38,14 +45,15 @@ margin: 3vw;
 }
 
 .me-photo {
-  max-width: 150px;
-  max-height: 150px;
+  width: 150px;
+  height: 150px;
   border-radius: 100px;
   margin-right: 25px;
 }
 
-.about-me {
-  font: 30px "Lora";
+.about-me, .profiles {
+  font: 30px "IBM Plex Sans";
+  padding-left:175px;
   padding-right: 20px;
   text-align: justify;
 }
@@ -61,6 +69,11 @@ a:hover, a:focus {
   border-bottom-color: #F74E45;
 }
 
+a:active {
+  background-color: #F74E45;
+  color: white;
+}
+
 /* a:active {
   border-bottom: none;
   color: white;
@@ -69,12 +82,12 @@ a:hover, a:focus {
 
 @media (max-width: 720px) {
   body {
-    border: none;
-    border-left: 4vw solid #F74E45;
+    justify-content: start;
+    border-left: 7vh solid #F74E45;
   }
   .me-photo {
-    max-width: 85px;
-    max-height: 85px;
+    width: 85px;
+    height: 85px;
     margin-right: 5px;
   }
   .page-title {
@@ -90,7 +103,7 @@ a:hover, a:focus {
   .nav-list li {
     border-bottom: 1px solid black;
   }
-  .about-me {
+  .about-me, .profiles {
     font-size: 18px;
     padding: 0;
   }
