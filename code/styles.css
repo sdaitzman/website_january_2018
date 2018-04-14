@@ -50,11 +50,9 @@ margin: 3vw;
   font: 100px "IBM Plex Sans";
   text-align: left;
   font-weight: 300;
-  margin: 5px;
+  margin: 0;
   line-height: 1;
   align-self: center;
-
-  padding: 10px;
 }
 
 .me-photo {
