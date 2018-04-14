@@ -9,9 +9,11 @@ $(document).ready(function() {
 		typerDataAttr: 'data-typer-targets',
 		typerInterval: 3000
 	}
-	
+
 	$('[data-typer-targets]').typer()
 
 	$('body').toggleClass('done')
+
+	document.addEventListener("touchstart", function(){}, true)
 
 })

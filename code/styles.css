@@ -3,6 +3,10 @@
   to { opacity: 1;transform: translateY(0) }
 }
 
+* {
+  transition: padding 0.2s linear, margin 0.2s linear, width 0.2s linear, height 0.2s linear, font-size 0.2s linear;
+}
+
 html, body { min-height: 100% }
 
 ::selection {
@@ -42,9 +46,10 @@ margin: 3vw;
   margin: 0;
   line-height: 1;
   align-self: center;
+  /* border-bottom: 3px solid #F74E45; */
 }
 
-.page-title::after {
+/* .page-title::after {
   display: flex;
   height:10px;
   background-color: #F74E45;
@@ -53,7 +58,7 @@ margin: 3vw;
   top: -12px;
   z-index: -10;
   user-select: none;
-}
+} */
 
 .me-photo {
   width: 150px;
@@ -70,20 +75,37 @@ margin: 3vw;
 }
 
 .love-typer {
-  margin-top: 0;
+  margin-top: 5px;
   font-size: 50px;
 }
 
-.profiles a {
-  font-style: italic;
-  border-bottom: none;
+.profiles ul {
+  padding: 0;
+  list-style: none;
+  display: block;
+  flex-direction: row;
+  line-height: 50px;
+}
+
+.profiles ul li {
+  display: inline;
+}
+
+.profiles ul li a {
   background-color: rgba(0, 0, 0, 0.05);
+  border-bottom: none;
+  font-style: italic;
+}
+
+.profiles ul li:not(:last-child)::after {
+  content: " + "
 }
 
 a {
   text-decoration: none;
   color: black;
   border-bottom: 1px solid black;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a:hover, a:focus {
@@ -102,10 +124,18 @@ a:active {
   background-color: #F74E45;
 } */
 
-@media (max-width: 720px) {
+@media (max-width: 850px) {
   body {
     justify-content: start;
     /* border-left: 7vh solid #F74E45; */
+  }
+  .about-me, .love-typer, .profiles {
+    font-size: 18px;
+    padding: 0;
+  }
+  .page-header {
+    flex-direction: column;
+    align-items: center;
   }
   .me-photo {
     width: 85px;
@@ -128,8 +158,24 @@ a:active {
   .nav-list li {
     border-bottom: 1px solid black;
   }
-  .about-me, .profiles {
-    font-size: 18px;
-    padding: 0;
+  .love-typer {
+    font-size: 26px;
+    text-align: center;
+    position: relative;
+  }
+  .profiles ul li {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .profiles ul li a {
+    width: 100%;
+    text-align: center;
+  }
+  .profiles ul li a:active {
+    background-color: rgba(0, 0, 0, 0.025);
+  }
+  .profiles ul li:not(:last-child)::after {
+    content: none;
   }
 }
