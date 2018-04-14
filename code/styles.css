@@ -43,10 +43,17 @@ margin: 3vw;
   font: 100px "IBM Plex Sans";
   text-align: left;
   font-weight: 300;
-  margin: 0;
+  margin: 5px;
   line-height: 1;
   align-self: center;
-  /* border-bottom: 3px solid #F74E45; */
+
+  padding: 10px;
+}
+
+.sam {
+  padding: 5px;
+  background-color: #F74E45;
+  color: white;
 }
 
 /* .page-title::after {
@@ -118,11 +125,9 @@ a:active {
   border-bottom-color: #fbc7c4;
 }
 
-/* a:active {
-  border-bottom: none;
-  color: white;
-  background-color: #F74E45;
-} */
+.profiles ul li a:active {
+  background-color: rgba(0, 0, 0, 0.025);
+}
 
 @media (max-width: 850px) {
   body {
@@ -171,9 +176,6 @@ a:active {
   .profiles ul li a {
     width: 100%;
     text-align: center;
-  }
-  .profiles ul li a:active {
-    background-color: rgba(0, 0, 0, 0.025);
   }
   .profiles ul li:not(:last-child)::after {
     content: none;
