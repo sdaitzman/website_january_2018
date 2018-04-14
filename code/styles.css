@@ -11,7 +11,10 @@ h1, h2, span, p {
   cursor: url(/img/select.png) 15 15, auto;
 }
 
-html, body { min-height: 100% }
+html, body {
+  min-height: 100%;
+  cursor: url(/img/pointer.png) 3 3, auto;
+}
 
 ::selection {
   color: white;
@@ -55,16 +58,11 @@ margin: 3vw;
 }
 
 .me-photo {
-  transition: box-shadow 0.2s ease-out;
   cursor: url(/img/drag.png) 15 15, auto;;
   width: 150px;
   height: 150px;
   border-radius: 100px;
   margin-right: 25px;
-}
-
-.me-photo:hover {
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .about-me, .love-typer, .profiles {
@@ -102,6 +100,7 @@ margin: 3vw;
 }
 
 a {
+  cursor: url(/img/click.png) 13 13, auto;
   text-decoration: none;
   color: black;
   border-bottom: 1px solid black;
