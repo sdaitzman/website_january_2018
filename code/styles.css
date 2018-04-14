@@ -7,6 +7,10 @@
   transition: padding 0.2s linear, margin 0.2s linear, width 0.2s linear, height 0.2s linear, font-size 0.2s linear;
 }
 
+h1, h2, span, p {
+  cursor: url(/img/select.png) 15 15, auto;
+}
+
 html, body { min-height: 100% }
 
 ::selection {
@@ -50,28 +54,17 @@ margin: 3vw;
   padding: 10px;
 }
 
-.sam {
-  padding: 5px;
-  background-color: #F74E45;
-  color: white;
-}
-
-/* .page-title::after {
-  display: flex;
-  height:10px;
-  background-color: #F74E45;
-  content: "";
-  position: relative;
-  top: -12px;
-  z-index: -10;
-  user-select: none;
-} */
-
 .me-photo {
+  transition: box-shadow 0.2s ease-out;
+  cursor: url(/img/drag.png) 15 15, auto;;
   width: 150px;
   height: 150px;
   border-radius: 100px;
   margin-right: 25px;
+}
+
+.me-photo:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .about-me, .love-typer, .profiles {
@@ -149,6 +142,7 @@ a:active {
   }
   .page-title {
     font-size: 45px;
+    text-align: center;
   }
   .page-title::after {
     top: -5px;

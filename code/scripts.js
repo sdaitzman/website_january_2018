@@ -16,4 +16,8 @@ $(document).ready(function() {
 
 	document.addEventListener("touchstart", function(){}, true)
 
+	var $draggable = $('.draggable').draggabilly({
+		containment: 'body'
+	})
+
 })
